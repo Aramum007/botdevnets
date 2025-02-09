@@ -34,8 +34,7 @@ import Exodus from "@/public/exodus.png";
 import Rainbow from "@/public/rainbow.jpeg";
 import Argent from "@/public/Argent.png";
 import metal from "@/public/metal.jpeg";
-import safemoon from "@/public/safemoon.avif";
-import Gnosis from "@/public/Gnosis.avif";
+import Gnosis from "@/public/one.jpg";
 import Pillar from "@/public/pillar.jpg";
 import imtoken from "@/public/imtoken.jpg";
 import ONTO from "@/public/ontology.jpeg";
@@ -48,10 +47,7 @@ import Bitpay from "@/public/bitpay.jpg";
 import ledger from "@/public/ledger_logo.png";
 import walleth from "@/public/wallETH.jpg";
 import authereum from "@/public/authereum.png";
-import inchwell from "@/public/1inch.avif";
-import huobi from "@/public/Huobi.avif";
 import eidoo from "@/public/eidoo.jpg";
-import loopring from "@/public/looping.avif";
 import trustvault from "@/public/trustvault.jpg";
 import atomic from "@/public/atomic.png";
 import coin96 from "@/public/coin98.jpg";
@@ -60,7 +56,6 @@ import alice from "@/public/alice.png";
 import Alphaallet from "@/public/alpha.jpeg";
 import dcent from "@/public/dcent.png";
 import zelcore from "@/public/zelcore.jpg";
-import nash from "@/public/nash.avif";
 import coinmoni from "@/public/coinmoni.png";
 import gridplus from "@/public/gridplus.png";
 import cybavo from "@/public/cybavo.jpg";
@@ -87,14 +82,12 @@ import keyring from "@/public/LOGO-KEYRING-PRO-2.png";
 import aktionariat from "@/public/aktionariat.jpeg";
 import talken from "@/public/talken.jpg";
 import flare from "@/public/flare.jpg";
-import kybersnap from "@/public/kyberswap.avif";
 import atoken from "@/public/atoken.jpg";
 import rwallet from "@/public/rwallet.png";
 import binana from "@/public/binana.png";
 import paytube from "@/public/paytube.png";
 import linen from "@/public/linen.png";
 import Other from "@/app/favicon.ico";
-import { Button } from "./ui/button";
 import Connect from "./Connect";
 
 interface wallets {
@@ -147,7 +140,6 @@ const wallets: wallets[] = [
   { id: 21, name: "Rainbow", image: Rainbow },
   { id: 22, name: "Argent", image: Argent },
   { id: 23, name: "Metal Web Auth", image: metal },
-  { id: 24, name: "Safemoon", image: safemoon },
   { id: 25, name: "Gnosis Safe", image: Gnosis },
   { id: 26, name: "Pillar", image: Pillar },
   { id: 27, name: "imToken", image: imtoken },
@@ -161,10 +153,7 @@ const wallets: wallets[] = [
   { id: 35, name: "Ledger", image: ledger },
   { id: 36, name: "WallETH", image: walleth },
   { id: 37, name: "Authereum", image: authereum },
-  { id: 38, name: "1inch Wallet", image: inchwell },
-  { id: 39, name: "Huobi Wallet", image: huobi },
   { id: 40, name: "Eidoo", image: eidoo },
-  { id: 41, name: "Loopring", image: loopring },
   { id: 42, name: "TrustVault", image: trustvault },
   { id: 43, name: "Atomic Wallet", image: atomic },
   { id: 44, name: "Coin96", image: coin96 },
@@ -173,7 +162,6 @@ const wallets: wallets[] = [
   { id: 47, name: "Alpha Wallet", image: Alphaallet },
   { id: 48, name: "D'CENT Wallet", image: dcent },
   { id: 49, name: "ZelCore", image: zelcore },
-  { id: 50, name: "Nash", image: nash },
   { id: 51, name: "Coinmoni", image: coinmoni },
   { id: 52, name: "GridPlus", image: gridplus },
   { id: 53, name: "Cybavo Wallet", image: cybavo },
@@ -200,7 +188,6 @@ const wallets: wallets[] = [
   { id: 74, name: "Aktionariat", image: aktionariat },
   { id: 75, name: "Talken", image: talken },
   { id: 76, name: "Flare Wallet", image: flare },
-  { id: 77, name: "KyberSwap", image: kybersnap },
   { id: 78, name: "AToken", image: atoken },
   { id: 79, name: "RWallet", image: rwallet },
   { id: 80, name: "Binana Wallet", image: binana },
