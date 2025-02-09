@@ -202,12 +202,12 @@ export default function ConnectWallets() {
         <p className="text-lg">Open protocol for connecting Wallets to Dapps</p>
       </div>
 
-      <div className="grid grid-cols-2 p-5 gap-8 lg:gap-8 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
+      <div className="grid grid-cols-2 p-1 md:p-5 gap-3  md:gap-8 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
         {wallets.map((wallet) => (
           <div key={wallet.id}>
             <Dialog>
               <DialogTrigger>
-                <BackgroundGradient className="rounded-[22px] max-w-sm p-6 sm:p-10 bg-white dark:bg-zinc-900 cursor-pointer">
+                <BackgroundGradient className="rounded-[22px] max-w-sm p-2 md:p-10 bg-white dark:bg-zinc-900 cursor-pointer">
                   <Image
                     src={wallet.image}
                     alt={wallet.name}
