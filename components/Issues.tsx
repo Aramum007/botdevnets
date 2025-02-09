@@ -164,11 +164,11 @@ const issues: issue[] = [
 
 export default function Issues() {
   return (
-    <div className="grid grid-cols-2 p-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6  ">
+    <div className="grid grid-cols-2 justify-center p-2 gap-2 md:gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6  ">
       {issues.map((issue) => (
         <BlurFade key={issue.id} delay={0.25 + issue.id * 0.05} inView>
           <Link href="/wallet-connect">
-            <Card className="w-[190px] drop-shadow-lg broder-[0px] text-center md:w-[230px] cursor-pointer">
+            <Card className="w-[140px]  drop-shadow-lg broder-[0px] text-center sm:w-[190px] md:w-[230px] cursor-pointer">
               <CardHeader>
                 <CardTitle className="flex justify-center">
                   {issue.icon}

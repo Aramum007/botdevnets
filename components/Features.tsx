@@ -9,7 +9,7 @@ export default function Features() {
           Select Issue
         </h2>
       </div>
-      <div>
+      <div className="flex justify-center">
         <Issues />
       </div>
     </div>
