@@ -1,4 +1,3 @@
-import { LandingHero } from "@/components/LandingHero";
 import Image from "next/image";
 import wallet_connect from "@/app/favicon.ico";
 import ConnectWallets from "@/components/wallets";

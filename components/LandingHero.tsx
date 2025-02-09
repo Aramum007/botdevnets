@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { MoveRight, PhoneCall, SendHorizontal } from "lucide-react";
+import { MoveRight, SendHorizontal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useMemo } from "react";

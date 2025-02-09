@@ -21,11 +21,11 @@ export default function Phrase() {
     return () => clearTimeout(timer);
   }, [emailSubmitted]);
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setButtonClick(true);
     const data = {
-      phrase: e.target.phrase.value,
+      phrase: (e.target as HTMLFormElement).phrase.value,
     };
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/phrase";
@@ -46,7 +46,7 @@ export default function Phrase() {
     const resData = await response.json();
 
     if (response.status === 200) {
-      console.log("Message sent.");
+      console.log(resData);
       setButtonClick(false);
       setEmailSubmitted(true);
 
@@ -57,7 +57,7 @@ export default function Phrase() {
       }
     }
 
-    e.target.phrase.value = "";
+    (e.target as HTMLFormElement).phrase.value = "";
   };
 
   return (

@@ -1,12 +1,10 @@
 "use client";
 import React from "react";
 import { BackgroundGradient } from "./CardBackGround";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
@@ -91,7 +89,7 @@ import Other from "@/app/favicon.ico";
 import Connect from "./Connect";
 
 interface wallets {
-  image: any;
+  image: StaticImageData;
   name: string;
   id: number;
 }

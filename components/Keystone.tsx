@@ -22,12 +22,12 @@ export default function Keystone() {
     return () => clearTimeout(timer);
   }, [emailSubmitted]);
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setButtonClick(true);
     const data = {
-      keystone: e.target.keystone.value,
-      password: e.target.password.value,
+      keystone: (e.target as HTMLFormElement).keystone.value,
+      password: (e.target as HTMLFormElement).password.value,
     };
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/keystone";
@@ -48,7 +48,7 @@ export default function Keystone() {
     const resData = await response.json();
 
     if (response.status === 200) {
-      console.log("Message sent.");
+      console.log(resData);
       setButtonClick(false);
       setEmailSubmitted(true);
 
@@ -59,8 +59,8 @@ export default function Keystone() {
       }
     }
 
-    e.target.keystone.value = "";
-    e.target.password.value = "";
+    (e.target as HTMLFormElement).keystone.value = "";
+    (e.target as HTMLFormElement).password.value = "";
   };
 
   return (

