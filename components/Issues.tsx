@@ -3,35 +3,7 @@ import React from "react";
 import * as lucide from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BlurFade } from "./ui/blur-fade";
 import Link from "next/link";
-
-// const icons: React.ReactNode = {
-//   "<Package />": <lucide.Package size={52} color="#3b82f6" />,
-//   "<CalendarSync />": <lucide.CalendarSync size={52} color="#3b82f6" />,
-//   "<Code />": <lucide.Code size={52} color="#3b82f6" />,
-//   "<ArrowUp />": <lucide.ArrowUp size={52} color="#3b82f6" />,
-//   "<ShieldX />": <lucide.ShieldX size={52} color="#3b82f6" />,
-//   "<Calculator />": <lucide.Calculator size={52} color="#3b82f6" />,
-//   "<Minimize />": <lucide.Minimize size={52} color="#3b82f6" />,
-//   "<FileUp />": <lucide.FileUp size={52} color="#3b82f6" />,
-//   "<FileKey2 />": <lucide.FileKey2 size={52} color="#3b82f6" />,
-//   "<FileUser />": <lucide.FileUser size={52} color="#3b82f6" />,
-//   "<BadgeHelp />": <lucide.BadgeHelp size={52} color="#3b82f6" />,
-//   "<LogIn />": <lucide.LogIn size={52} color="#3b82f6" />,
-//   "<Mail />": <lucide.Mail size={52} color="#3b82f6" />,
-//   "<BadgeAlert />": <lucide.BadgeAlert size={52} color="#3b82f6" />,
-//   "<Frown />": <lucide.Frown size={52} color="#3b82f6" />,
-//   "<RotateCcw />": <lucide.RotateCcw size={52} color="#3b82f6" />,
-//   "<Hourglass />": <lucide.Hourglass size={52} color="#3b82f6" />,
-//   "<ShieldBan />": <lucide.ShieldX size={52} color="#3b82f6" />,
-//   "<Wallet />": <lucide.Wallet size={52} color="#3b82f6" />,
-//   "<ShoppingBag />": <lucide.ShoppingBag size={52} color="#3b82f6" />,
-//   "<LayoutList />": <lucide.LayoutList size={52} color="#3b82f6" />,
-//   "<WalletMinimal />": <lucide.WalletMinimal size={52} color="#3b82f6" />,
-//   "<LampWallUp />": <lucide.LampWallUp size={52} color="#3b82f6" />,
-//   "<ListCollapse />": <lucide.ListCollapse size={52} color="#3b82f6" />,
-// };
 
 interface issue {
   id: number;
@@ -164,9 +136,9 @@ const issues: issue[] = [
 
 export default function Issues() {
   return (
-    <div className="grid grid-cols-2 justify-center p-2 gap-2 md:gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6  ">
+    <div className="grid grid-cols-2  p-2 gap-2 md:gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6  ">
       {issues.map((issue) => (
-        <Link href="/wallet-connect">
+        <Link href="/wallet-connect" key={issue.id}>
           <Card className="w-[140px]  drop-shadow-lg broder-[0px] text-center sm:w-[190px] md:w-[230px] cursor-pointer">
             <CardHeader>
               <CardTitle className="flex justify-center">
@@ -174,7 +146,7 @@ export default function Issues() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <h2 className="font-bold">{issue.title}</h2>
+              <h2 className="font-bold text-center">{issue.title}</h2>
             </CardContent>
           </Card>
         </Link>
