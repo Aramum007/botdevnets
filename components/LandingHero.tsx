@@ -32,7 +32,11 @@ function LandingHero() {
           </header>
           <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col mt-[-20px] md:mt-[-30px] lg:mt-[-60px]">
             <div>
-              <Button variant="default" size="lg" className="gap-4" asChild>
+              <Button
+                size="lg"
+                className="gap-4 bg-[#3b82f6] text-white hover:bg-[#3b76f6] font-bold text-lg"
+                asChild
+              >
                 <Link href={"/wallet-connect"}>
                   Decentralized Protocol <MoveRight className="w-4 h-4" />
                 </Link>
@@ -73,12 +77,21 @@ function LandingHero() {
               </p>
             </div>
             <div className="flex flex-row gap-3">
-              <Button size="lg" className="gap-4" variant="outline" asChild>
+              <Button
+                size="default"
+                className="gap-4 font-semibold text-lg"
+                variant="outline"
+                asChild
+              >
                 <Link href={"/wallet-connect"}>
                   Connect Wallet <SendHorizontal className="w-4 h-4" />
                 </Link>
               </Button>
-              <Button size="lg" className="gap-4" asChild>
+              <Button
+                size="default"
+                className=" bg-[#3b82f6] text-white hover:bg-[#3b76f6] font-semibold text-lg"
+                asChild
+              >
                 <Link href={"/wallet-connect"}>Sync</Link>
               </Button>
             </div>

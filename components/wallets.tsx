@@ -207,7 +207,7 @@ export default function ConnectWallets() {
           <div key={wallet.id}>
             <Dialog>
               <DialogTrigger>
-                <BackgroundGradient className="rounded-[22px] max-w-sm p-2 md:p-10 bg-white dark:bg-zinc-900 cursor-pointer">
+                <BackgroundGradient className="rounded-2xl md:rounded-[22px] max-w-sm p-2 md:p-10 bg-white dark:bg-zinc-900 cursor-pointer">
                   <Image
                     src={wallet.image}
                     alt={wallet.name}
