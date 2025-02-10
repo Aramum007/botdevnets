@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import * as lucide from "lucide-react";
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 
@@ -136,10 +135,10 @@ const issues: issue[] = [
 
 export default function Issues() {
   return (
-    <div className="grid grid-cols-2  p-2 gap-2 md:gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6  ">
+    <div className="grid grid-cols-2 p-2 gap-2 md:gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
       {issues.map((issue) => (
         <Link href="/wallet-connect" key={issue.id}>
-          <Card className="w-[140px]  drop-shadow-lg broder-[0px] text-center sm:w-[190px] md:w-[230px] cursor-pointer">
+          <Card className=" drop-shadow-lg broder-[0px] text-center md:w-[230px] cursor-pointer overflow-hidden">
             <CardHeader>
               <CardTitle className="flex justify-center">
                 {issue.icon}
